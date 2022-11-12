@@ -7,7 +7,13 @@ var app = new Vue({
       { position: "assets/img/39709319980_7b2159e8b5.jpg" },
     ],
     index: 1,
+    timer: null,
   },
+
+  mounted: function () {
+    this.startRotation();
+  },
+
   methods: {
     sliderRight: function () {
       if (this.index >= this.img.length - 1) {
@@ -21,6 +27,10 @@ var app = new Vue({
         return (this.index = 2);
       }
       return this.index--;
+    },
+
+    startRotation: function () {
+      this.timer = setInterval(this.sliderRight, 5000);
     },
   },
 });
