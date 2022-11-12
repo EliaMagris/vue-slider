@@ -29,6 +29,23 @@ var app = new Vue({
       return this.index--;
     },
 
+    stopRotation: function () {
+      clearTimeout(this.timer);
+      this.timer = null;
+    },
+
+    img0: function () {
+      return (this.index = 0);
+    },
+
+    img1: function () {
+      return (this.index = 1);
+    },
+
+    img2: function () {
+      return (this.index = 2);
+    },
+
     startRotation: function () {
       this.timer = setInterval(this.sliderRight, 5000);
     },

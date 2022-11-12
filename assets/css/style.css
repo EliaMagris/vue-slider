@@ -1,0 +1,8 @@
+button{
+    background-color: white;
+}
+
+.fade{
+    transition: all 0.8s ease;
+    position: absolute;
+  }
