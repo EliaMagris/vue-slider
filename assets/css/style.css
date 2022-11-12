@@ -2,7 +2,14 @@ button{
     background-color: white;
 }
 
-.fade{
-    transition: all 0.8s ease;
-    position: absolute;
-  }
+.fa-circle:hover{
+  color: red
+}
+
+.fa-arrow-left:hover{
+    color: red;
+}
+
+.fa-arrow-right:hover{
+    color: red;
+}
