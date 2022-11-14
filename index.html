@@ -27,15 +27,13 @@
         <button class="border border-0" @click="sliderLeft">
           <i class="fa-solid fa-arrow-left fs-4"></i>
         </button>
-        <img :src="img[index].position" alt="" />
+        <img :src="img[indexImg].position" alt=""/>
         <button class="border border-0" @click="sliderRight">
           <i class="fa-solid fa-arrow-right fs-4"></i>
         </button>
       </div>
       <div class="text-center">
-        <button class="border border-0" @click="img0"><i class="fa-solid fa-circle px-2 mt-2"></i></button>
-        <button class="border border-0" @click="img1"><i class="fa-solid fa-circle px-2 mt-2"></i></button>
-        <button class="border border-0" @click="img2"><i class="fa-solid fa-circle px-2 mt-2"></i></button>
+        <button class="border border-0"><i class="fa-solid fa-circle px-2 mt-2" v-for="(element, index) in img" @click="imageSelection(index)"></i></button>
       </div>
     </div>
 

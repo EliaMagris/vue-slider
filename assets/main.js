@@ -6,7 +6,7 @@ var app = new Vue({
       { position: 'assets/img/52c897521aa86a677f446cf95e20d57b.jpg' },
       { position: 'assets/img/39709319980_7b2159e8b5.jpg' },
     ],
-    index: 1,
+    indexImg: 0,
     timer: null,
   },
 
@@ -16,29 +16,21 @@ var app = new Vue({
 
   methods: {
     sliderRight: function () {
-      if (this.index >= this.img.length - 1) {
-        return (this.index = 0);
+      if (this.indexImg >= this.img.length - 1) {
+        return (this.indexImg = 0);
       }
-      return this.index++;
+      return this.indexImg++;
+    },
+
+    imageSelection(index){
+      this.indexImg = index
     },
 
     sliderLeft: function () {
-      if (this.index <= 0) {
-        return (this.index = 2);
+      if (this.indexImg <= 0) {
+        return (this.indexImg = 2);
       }
-      return this.index--;
-    },
-
-    img0: function () {
-      return (this.index = 0);
-    },
-
-    img1: function () {
-      return (this.index = 1);
-    },
-
-    img2: function () {
-      return (this.index = 2);
+      return this.indexImg--;
     },
 
     startRotation: function () {
